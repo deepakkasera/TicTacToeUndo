@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
-class TttUndoSolutionApplicationTests {
+class TttUndoApplicationTests {
     private Game game;
     private GameController gameController;
     private List<Player> players;
