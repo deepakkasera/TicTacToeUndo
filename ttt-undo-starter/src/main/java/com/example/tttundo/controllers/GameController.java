@@ -1,5 +1,6 @@
 package com.example.tttundo.controllers;
 
+import com.example.tttundo.exceptions.EmptyMovesException;
 import com.example.tttundo.exceptions.InvalidMoveException;
 import com.example.tttundo.models.Game;
 import com.example.tttundo.models.GameState;
@@ -27,8 +28,8 @@ public class GameController {
         return game.getWinner();
     }
 
-    public void undo(Game game) {
-        //Implement UNDO functionality
+    public void undo(Game game) throws EmptyMovesException {
+        game.undo();
     }
 
     public GameState getGameState(Game game) {

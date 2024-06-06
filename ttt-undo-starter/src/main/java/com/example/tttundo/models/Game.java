@@ -1,5 +1,6 @@
 package com.example.tttundo.models;
 
+import com.example.tttundo.exceptions.EmptyMovesException;
 import com.example.tttundo.exceptions.GameInvalidationException;
 import com.example.tttundo.exceptions.InvalidMoveException;
 import com.example.tttundo.strategies.WinningStrategy;
@@ -157,5 +158,9 @@ public class Game {
         } else if (moves.size() == board.getDimension() * board.getDimension()) {
             gameState = GameState.DRAW;
         }
+    }
+
+    public void undo() throws EmptyMovesException {
+        //Implement Undo functionality.
     }
 }
